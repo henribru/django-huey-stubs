@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "django-huey-stubs"
+version = "0.0.3"
+license = "Apache-2.0"
+description = "Type stubs for django-huey"
+authors = ["Henrik Bruådal <henrik.bruasdal@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/henribru/django-huey-stubs"
+packages = [
+    { include = "django_huey-stubs" },
+]
+classifiers = [
+    "Typing :: Stubs Only",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+django-huey = "^1.0.0"
+typing-extensions = ">3.10.0,<5.0.0"
+huey-stubs = "^0.0.2"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^22.3.0", python = "^3.9"}
+isort = {version = "^5.10.1", python = "^3.9"}
+mypy = {version = "^0.950", python = "^3.9"}
+
+[tool.isort]
+profile = "black"
+known_first_party = "django_huey"
+combine_as_imports = true
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
